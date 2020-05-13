@@ -10,15 +10,15 @@ author: William D'Souza
 ![header_image]({{ site.url }}/images/tsne_header.png)
 
 
-Unsupervised learning techniques are incredibly powerful if implemented properly. Many people are afraid to use these techniques because it is hard for them to validate the model results in their own heads. There is always a known label (or answer) when training supervised models, so it is much easier to quantify how well the model performs from inspecting various measures. The uncertainty of unsupervised learning can leave you with discomfort because there is no real way to quantify the model's results, other than extracting insights from it and “making sense” with what we see.
+Unsupervised learning techniques are incredibly powerful if implemented properly. Many people are afraid to use these techniques because it is hard for them to validate the model results in their own head. There is always a known label (or answer) when training supervised models, so it is much easier to quantify how well a supervised model performs from inspecting various measures. The uncertainty of unsupervised learning can leave you with discomfort because there is no real way to quantify the model's results, other than extracting insights from it and “making sense” with what we see.
 
-To endeavour into unsupervised techniques, there needs to be a trust in the math behind it. After that, it can be a little bit easier to cope with. In regards to clustering, there is another practice that you can do to help you gain more confidence in the model. 
+To endeavour into unsupervised techniques, there needs to be a trust in the math behind it. After that, it can be a little bit easier to cope with. In regards to clustering, there is another practice that you can do to help you gain more confidence in your results. 
 
-In most real situations, we will usually have a large number of features for our model. Unfortunately, our simple brains cannot comprehend what it will anything will look like if it surpasses 3 dimensions! Visualising your clusters in a low dimensional space will help you see how defined the clusters are, the space between them, and if choosing a clustering method is the right way to attack your problem.
+In most real situations, we will usually have a large number of features for our model. Unfortunately, our simple brains cannot comprehend what anything will look like if it surpasses 3 dimensions! Visualising your clusters in a low dimensional space will help you see how defined the clusters are, the space between them, and if choosing a clustering method is the right way to attack your problem.
 
 ## Libraries and Preprocessing
 
-In general, it is important to either pick out the features that you want to cluster on for your end analysis. If they are not fully present, then you may need to engineer them. All following code is an example of NHL player data from 2004-2018, and some feature engineering to create a new dataset. **It is important to note that this way of wrangling your data may not be applicable and to use methods that will get your data to the state you need. Data wrangling is a creative stage that everyone may do a bit differently.**
+In general, it is important to pick out the features that you want to cluster on for your end analysis. If they are not fully present, then you may need to engineer them. All the following code is an example of NHL player data from 2004-2018 with some feature engineering to create a new dataset. **It is important to note that this way of wrangling your data will most likely not be applicable for you. Use methods that will get your data to the state you need. Data wrangling is a creative stage that everyone may do a little bit differently.**
 
 ``` 
 import pandas as pd 
@@ -124,11 +124,11 @@ To give you an understanding of what each column represents, here is a brief exp
 
 ## Scaling the Data, Choosing the Method & Number of Clusters
 
-It is important to scale your data. The results you yield if you do not will be extremely misleading. The general reason to scale is that not all measurements are the same and it is inappropriate to use raw values for situations where you use different measures in one model. An example of this is using weight and height, one measurement is in kilograms/pounds and the other in feet/meters. According to my application, I normalized the data using a Min-Max method. 
+It is important to scale your data. The results you yield if you don't will be extremely misleading. The general reason to scale is that not all measurements are the same and it is inappropriate to use raw values for situations where you use different measures in one application. An example of this is using weight and height, one measurement is in kilograms/pounds and the other in feet/meters. According to my application, I normalized the data using a Min-Max method. 
 
 I also decided to use hierarchical clustering over k-means. Hierarchical clustering is extremely powerful and does not necessarily need you to state the number of clusters. It even produces beautiful dendrograms that can help you interpret your clusters
 
-Depending on your application, you may look at a *Standard* or even a *Robust Scaler*. The number of clusters was evaluated using the silhouette score. The optimal number for the silhouette score is typically the one with the highest coefficient. Although the "optimal" number was not the final one chosen in this application, **It is important to note that the number of clusters you choose can also be up driven by practical needs** .
+Depending on your application, you may look at a *Standard Scaler* or even a *Robust Scaler*. The number of clusters was evaluated using the silhouette score. The optimal number for the silhouette score is typically the one with the highest coefficient. Although the "optimal" number was not the final one chosen in this application, **It is important to note that the number of clusters you choose can also be driven by practical or objective needs** 
 
 ```
 # Scaling Data
@@ -152,7 +152,7 @@ For n_clusters = 9 The average silhouette_score is : 0.3541173097027004
 
 ## Visualising the Clusters
 
-The code below creates the following visuals that project the clusters in a 2-D and 3-D space. We use dimensionality reduction to come *compress* the data into 2 and 3 features. T-SNE is a powerful tool to visualise the clusters, but is extremely sensitive and needs to be tuned using iterative methods. PCA is a popular method and is extremely powerful. Visualising your clusters will give you that extra confidence in your end goal because it will help you understand if clustering your data will yield purposeful results for your objective!
+The code below creates the following visuals that project the clusters in a 2-D and 3-D space. We use dimensionality reduction to *compress* the data into a lower number of features. T-SNE is a powerful tool to visualise the clusters, but is extremely sensitive and needs to be tuned using iterative methods. PCA is a popular method and is extremely powerful. Visualising your clusters will give you that extra confidence in your end goal because it will help you understand if clustering your data will yield purposeful results for your objective!
 
 ```
 # Performing t-sne on data
@@ -217,4 +217,4 @@ plt.show()
 ![useful image]({{ site.url }}/images/pca_2.png)
 
 
-**Using clustering for this dataset is up for discussion. As well, there are possibly many things that could be done differently from selecting features and choice of the clustering method. Hopefully, this is just an informative tutorial for you to realise the importance of visualising your clusters!**
+**Using clustering for this dataset is up for discussion. As well, there are possibly many things that can be done differently from selecting features to choice of the clustering method. Hopefully, this is just an informative tutorial for you to realise the importance of visualising your clusters!**
