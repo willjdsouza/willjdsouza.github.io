@@ -3,9 +3,9 @@ layout: post
 title:  "Visualising Clusters in a Low Dimensional Space"
 date:   2020-05-12
 categories: clustering 
+author: William D'Souza
 ---
 
-# Visualising Clusters in a Low Dimensional Space
 
 ![header_image]({{ site.url }}/images/tsne_header.png)
 
