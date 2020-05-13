@@ -10,9 +10,11 @@ categories: clustering
 ![header_image]({{ site.url }}/images/tsne_header.png)
 
 
-Unsupervised learning techniques are incredibly powerful if implemented properly. Many people are afraid to use these techniques because it is hard for them to validate the results. When training supervised models there is always a known label so it is much easier to quantify how well the model performs from inspecting various measures. The uncertainty of unsupervised learning can leave you with discomfort because there is no real way to quantify the model's results, other than extracting insights from it and “making sense” with what we see.
+Unsupervised learning techniques are incredibly powerful if implemented properly. Many people are afraid to use these techniques because it is hard for them to validate the model results in their own heads. There is always a known label (or answer) when training supervised models, so it is much easier to quantify how well the model performs from inspecting various measures. The uncertainty of unsupervised learning can leave you with discomfort because there is no real way to quantify the model's results, other than extracting insights from it and “making sense” with what we see.
 
-To endeavour into unsupervised techniques, there needs to be a trust in the math behind it. After that, it can be a little bit easier to cope with. In regards to clustering, there is another practice that you can do to help you gain more confidence in the model. In most situations, we will usually have a large number of features for our model and our brain simply cannot comprehend what something can look like in anything past a 3-dimensional space! Visualising your clusters in a low dimensional space will help you see how defined these clusters are, the space between them, and if choosing a clustering method is the right way to attack your problem.
+To endeavour into unsupervised techniques, there needs to be a trust in the math behind it. After that, it can be a little bit easier to cope with. In regards to clustering, there is another practice that you can do to help you gain more confidence in the model. 
+
+In most real situations, we will usually have a large number of features for our model. Unfortunately, our simple brains cannot comprehend what it will anything will look like if it surpasses 3 dimensions! Visualising your clusters in a low dimensional space will help you see how defined the clusters are, the space between them, and if choosing a clustering method is the right way to attack your problem.
 
 ## Libraries and Preprocessing
 
