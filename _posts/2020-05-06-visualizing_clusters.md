@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Visualizing Clusters in a Low Dimensional Space"
+title:  "Visualising Clusters in a Low Dimensional Space"
 date:   2020-05-12
 categories: clustering 
 ---
 
-# Visualizing Clusters in a Low Dimensional Space
+# Visualising Clusters in a Low Dimensional Space
 
 ![header_image]({{ site.url }}/images/tsne_header.png)
 
@@ -150,9 +150,9 @@ For n_clusters = 8 The average silhouette_score is : 0.42161463250245973
 For n_clusters = 9 The average silhouette_score is : 0.3541173097027004
 ```
 
-## Visualizing the Clusters
+## Visualising the Clusters
 
-The code below creates the following visuals that project the clusters in a 2-D and 3-D space. We use dimensionality reduction to come *compress* the data into 2 and 3 features. T-SNE is a powerful tool to visualize the clusters, but is extremely sensitive and needs to be tuned using iterative methods. PCA is a popular method and is extremely powerful. Visualizing your clusters will give you that extra confidence in your end goal because it will help you understand if clustering your data will yield purposeful results for your objective!
+The code below creates the following visuals that project the clusters in a 2-D and 3-D space. We use dimensionality reduction to come *compress* the data into 2 and 3 features. T-SNE is a powerful tool to visualise the clusters, but is extremely sensitive and needs to be tuned using iterative methods. PCA is a popular method and is extremely powerful. Visualising your clusters will give you that extra confidence in your end goal because it will help you understand if clustering your data will yield purposeful results for your objective!
 
 ```
 # Performing t-sne on data
@@ -176,7 +176,7 @@ df_scaled['pca-two'] = pca_result[:,1]
 df_scaled['pca-three'] = pca_result[:,2]
 df_scaled['clusters'] = clustering.labels_
 
-## Visualizing clusters in a 2-D Space using tsne
+## Visualising clusters in a 2-D Space using tsne
 plt.figure(figsize=(10,5))
 sns.scatterplot(
 x = df_scaled["tsne-2d-one"], 
@@ -188,7 +188,7 @@ alpha=0.3)
 plt.show()
 
 
-## Visualizing Clusters in a 2-D & 3-D Space using PCA
+## Visualising Clusters in a 2-D & 3-D Space using PCA
 plt.figure(figsize=(16,7))
 sns.scatterplot(
     x="pca-one", y="pca-two",
@@ -217,4 +217,4 @@ plt.show()
 ![useful image]({{ site.url }}/images/pca_2.png)
 
 
-**Using clustering for this dataset is up for discussion. As well, there are possibly many things that could be done differently from selecting features and choice of the clustering method. Hopefully, this is just an informative tutorial for you to realise the importance of visualizing your clusters!**
+**Using clustering for this dataset is up for discussion. As well, there are possibly many things that could be done differently from selecting features and choice of the clustering method. Hopefully, this is just an informative tutorial for you to realise the importance of visualising your clusters!**
