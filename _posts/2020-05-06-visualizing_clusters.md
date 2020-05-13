@@ -34,6 +34,25 @@ from sklearn.decomposition import PCA
 
 nhl = pd.read_csv('nhl.csv', encoding= 'latin-1')
 
+## Features for Clusters
+clustering_columns = ['player',
+    'pim_gp',
+    'even_g_gp',
+    'pp_g_gp',
+    'sh_g_gp', 
+    'gw_g_gp',
+    'even_a_gp',
+    'pp_a_gp',
+    'sh_a_gp',
+    'sh_perc',
+    'avg_toi',
+    'avg_blocks',
+    'avg_hits',
+    'fow']
+
+#summing up stats to be cumulative
+grouped = nhl_cleaned.groupby('Player').sum().reset_index()
+
 # Run through each player, calculate per game stats, and append to df
 cleaned_df = pd.DataFrame(columns = clustering_columns) 
 player_list = list(set(grouped['Player']))
