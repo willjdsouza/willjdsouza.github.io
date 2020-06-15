@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Get Close With Learning Curves"
-date:   2020-05-12
+date:   2020-05-14
 categories: optimizations  
 author: William D'Souza
 ---
@@ -12,7 +12,7 @@ Learning curves are a simple yet effective visual that should be in your toolkit
 
 When describing data to a viewer, we typically represent any findings through visualizations for the fundamental reason that visuals speak largely to people. It gives the audience the ability to process the information faster than just going through sheets of numbers.  It's easy for us to forget that as providers of data, we need to rely on visuals just as much as someone who digests it.
 
-## What Are Learning Curves? Why Are They Helpful
+## What Are Learning Curves? Why Are They Helpful?
 
 Learning curves are a visual tool to diagnose your model's performance during its training stage. The visuals outline the relationship between your training data and any chosen metrics. It equips the practitioner with important information by outlining the changes in the model's learning performance in terms of experience. 
 
