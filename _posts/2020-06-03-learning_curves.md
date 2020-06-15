@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Get Close With Learning Curves"
-date:   2020-05-14
+date:   2020-06-14
 categories: optimizations  
 author: William D'Souza
 ---
