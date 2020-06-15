@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Visualising Clusters in a Low Dimensional Space"
+title:  "Visualising Clusters in a low Dimensional Space"
 date:   2020-05-12
 categories: clustering 
 author: William D'Souza
 ---
 
 
-![header_image]({{ site.url }}/images/tsne_header.png)
+![header_image]({{ site.url }}/images/visualising_clusters/tsne_header.png)
 
 
 Unsupervised learning techniques are incredibly powerful if implemented properly. Many people are afraid to use these techniques because it is hard for them to validate the model results in their own head. There is always a known label (or answer) when training supervised models, so it is much easier to quantify how well a supervised model performs from inspecting various measures. The uncertainty of unsupervised learning can leave you with discomfort because there is no real way to quantify the model's results, other than extracting insights from it and “making sense” with what we see.
@@ -103,7 +103,7 @@ for player in player_list:
 
 The resulting data frame looks like this:
 
-![useful image]({{ site.url }}/images/cluster_df.png)
+![useful image]({{ site.url }}/images/visualising_clusters/cluster_df.png)
 
 To give you an understanding of what each column represents, here is a brief explanation for each of the variables.
 
@@ -212,9 +212,9 @@ ax.set_ylabel('pca-two')
 ax.set_zlabel('pca-three')
 plt.show()
 ```
-![useful image]({{ site.url }}/images/tsne.png)
-![useful image]({{ site.url }}/images/pca_1.png)
-![useful image]({{ site.url }}/images/pca_2.png)
+![useful image]({{ site.url }}/images/visualising_clusters/tsne.png)
+![useful image]({{ site.url }}/images/visualising_clusters/pca_1.png)
+![useful image]({{ site.url }}/images/visualising_clusters/pca_2.png)
 
 
 **Using clustering for this dataset is up for discussion. As well, there are possibly many things that can be done differently from selecting features to choice of the clustering method. Hopefully, this is just an informative tutorial for you to realise the importance of visualising your clusters!**
