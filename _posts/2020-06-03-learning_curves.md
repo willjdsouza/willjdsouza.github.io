@@ -24,7 +24,7 @@ The fundamental concept of the bias-variance tradeoff deals with prediction erro
 
 **2) Can help you understand the fit of your model**
 
-Related to the bias-variance trade-off,  learning curves are an amazing way to evaluate the goodness of fit for the model. ***Undefitting*** happens when the model can not capture any patterns in the data, typically an indication of suffering from a high bias and low variance. ***Overfitting*** occurs when the model captures the patterns in the data extremely closely, typically an indication the model is suffering from high variance and loss bias. As you could guess a ***Well fit*** model is one that minimizes the trade-off between variance and bias, gains an understanding of the data and can generalize.
+Related to the bias-variance trade-off,  learning curves are an amazing way to evaluate the goodness of fit for the model. ***Undefitting*** happens when the model can not capture any patterns in the data, typically an indication the model is suffering from high bias and low variance. ***Overfitting*** occurs when the model captures the patterns in the data extremely closely, typically an indication the model is suffering from high variance and loss bias. As you could guess a ***Well fit*** model is one that minimizes the trade-off between variance and bias, gains an understanding of the data and can generalize.
 
 **3) You develop a more intimate understanding of how your model operates**
 
