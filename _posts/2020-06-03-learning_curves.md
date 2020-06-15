@@ -22,7 +22,7 @@ Learning curves are helpful for a few main reasons:
 
 The fundamental concept of the bias-variance tradeoff deals with prediction errors. There is always a tradeoff with a models ability to minimize bias and variance. An excess of bias in the model and it may ignore the data. An excess of variance in the model and it will "over-analyze" the data and have problems generalising. *Flexible models will have higher variance but less bias. The more flexible the model, the variance will increase and bias will decrease*
 
-***2) Can help you understand the fit of your model**
+**2) Can help you understand the fit of your model**
 
 Related to the bias-variance trade-off,  learning curves are an amazing way to evaluate the goodness of fit for the model. ***Undefitting*** happens when the model can not capture any patterns in the data, typically an indication of suffering from a high bias and low variance. ***Overfitting*** occurs when the model captures the patterns in the data extremely closely, typically an indication the model is suffering from high variance and loss bias. As you could guess a ***Well fit*** model is one that minimizes the trade-off between variance and bias, gains an understanding of the data and can generalize.
 
